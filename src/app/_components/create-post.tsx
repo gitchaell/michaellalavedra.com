@@ -18,8 +18,8 @@ export function CreatePost() {
 
 	return (
 		<form
-			onSubmit={e => {
-				e.preventDefault()
+			onSubmit={event => {
+				event.preventDefault()
 				createPost.mutate({ name })
 			}}
 			className='flex flex-col gap-2'>
