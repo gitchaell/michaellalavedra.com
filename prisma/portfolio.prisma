@@ -1,0 +1,168 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["rhel-openssl-1.0.x"]
+}
+
+model Developer {
+  id        String    @id @default(uuid())
+  imageUrl  String?
+  videoUrl  String?
+  resumeUrl String?
+  firstName String
+  lastName  String
+  tagLine   String
+  about     String
+  email     String?   @unique
+  location  String
+  timezone  String
+  whatsapp  String?
+  telegram  String?
+  linkedin  String?
+  github    String?
+  facebook  String?
+  instagram String?
+  youtube   String?
+  twitch    String?
+  tiktok    String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  links     Link[]    @relation(name: "DeveloperToLink")
+  works     Work[]    @relation(name: "DeveloperToWork")
+  skills    Skill[]   @relation(name: "DeveloperToSkill")
+  projects  Project[] @relation(name: "DeveloperToProject")
+  courses   Course[]  @relation(name: "DeveloperToCourse")
+  hobbies   Hobby[]   @relation(name: "DeveloperToHobby")
+  reviews   Review[]  @relation(name: "DeveloperToReview")
+  posts     Post[]    @relation(name: "DeveloperToPost")
+}
+
+model Link {
+  id          String    @id @default(uuid())
+  title       String
+  url         String
+  icon        String?   @default("link")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  developerId String
+  developer   Developer @relation(name: "DeveloperToLink", fields: [developerId], references: [id])
+}
+
+model Work {
+  id           String    @id @default(uuid())
+  position     String
+  startTime    DateTime
+  endTime      DateTime
+  achievements String
+  companyId    String
+  company      Company   @relation(name: "CompanyToWork", fields: [companyId], references: [id])
+  projectId    String
+  project      Project   @relation(name: "ProjectToWork", fields: [projectId], references: [id])
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  developerId  String
+  developer    Developer @relation(name: "DeveloperToWork", fields: [developerId], references: [id])
+}
+
+model Skill {
+  id          String        @id @default(uuid())
+  name        String
+  notes       String?
+  siteUrl     String?
+  icon        String?       @default("skill")
+  category    SkillCategory
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  developerId String
+  developer   Developer     @relation(name: "DeveloperToSkill", fields: [developerId], references: [id])
+}
+
+model Project {
+  id          String    @id @default(uuid())
+  name        String
+  notes       String?
+  siteUrl     String?
+  logoUrl     String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  works       Work[]    @relation(name: "ProjectToWork")
+  developerId String
+  developer   Developer @relation(name: "DeveloperToProject", fields: [developerId], references: [id])
+}
+
+model Company {
+  id        String   @id @default(uuid())
+  name      String
+  notes     String?
+  siteUrl   String?
+  logoUrl   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  works     Work[]   @relation(name: "CompanyToWork")
+  courses   Course[] @relation(name: "CompanyToCourse")
+}
+
+model Course {
+  id             String       @id @default(uuid())
+  title          String
+  notes          String?
+  tearchers      String?
+  certificateUrl String?
+  startTime      DateTime
+  endTime        DateTime?
+  status         CourseStatus @default(ToStart)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  companyId      String
+  company        Company      @relation(name: "CompanyToCourse", fields: [companyId], references: [id])
+  developerId    String
+  developer      Developer    @relation(name: "DeveloperToCourse", fields: [developerId], references: [id])
+}
+
+model Hobby {
+  id          String    @id @default(uuid())
+  title       String
+  notes       String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  developerId String
+  developer   Developer @relation(name: "DeveloperToHobby", fields: [developerId], references: [id])
+}
+
+model Review {
+  id          String    @id @default(uuid())
+  imageUrl    String?
+  author      String
+  comment     String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  developerId String
+  developer   Developer @relation(name: "DeveloperToReview", fields: [developerId], references: [id])
+}
+
+model Post {
+  id        String    @id @default(uuid())
+  title     String
+  content   String? // Markdown syntax
+  published Boolean   @default(false)
+  author    Developer @relation(name: "DeveloperToPost", fields: [authorId], references: [id])
+  authorId  String
+}
+
+enum SkillCategory {
+  ProgrammingLanguage
+  Framework
+  Library
+  Database
+  Infrastructure
+}
+
+enum CourseStatus {
+  ToStart
+  InProgress
+  Completed
+}

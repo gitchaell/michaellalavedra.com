@@ -1,0 +1,21 @@
+{
+	"IDX.aI.enableInlineCompletion": true,
+	"IDX.aI.enableCodebaseIndexing": true,
+	"IDX.corgiMode": true,
+	"editor.renderWhitespace": "all",
+	"editor.tabSize": 2,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.useTabs": true,
+	"editor.tabCompletion": "on",
+	"editor.linkedEditing": true,
+	"editor.autoClosingDelete": "auto",
+	"editor.autoClosingOvertype": "auto",
+	"html.autoClosingTags": true,
+	"javascript.autoClosingTags": true,
+	"typescript.autoClosingTags": true,
+	"debug.toolBarLocation": "docked",
+	"files.autoSave": "off",
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	}
+}
