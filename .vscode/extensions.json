@@ -5,6 +5,7 @@
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
 		"yoavbls.pretty-ts-errors",
-		"prisma.prisma"
+		"prisma.prisma",
+		"ms-vscode.vscode-typescript-next"
 	]
 }
