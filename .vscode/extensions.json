@@ -6,6 +6,7 @@
 		"esbenp.prettier-vscode",
 		"yoavbls.pretty-ts-errors",
 		"prisma.prisma",
-		"ms-vscode.vscode-typescript-next"
+		"ms-vscode.vscode-typescript-next",
+		"jock.svg"
 	]
 }
