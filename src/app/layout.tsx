@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 		name: '@gitchaell',
 		url: 'https://github.com/gitchaell'
 	},
-	themeColor: '#1ea7fd',
+	themeColor: '#1ea7fd'
 }
 
 export default function RootLayout({

@@ -18,9 +18,7 @@
 	"[prisma]": {
 		"editor.defaultFormatter": "Prisma.prisma"
 	},
-	"css.customData": [
-		".vscode/tailwind.json"
-	],
+	"css.customData": [".vscode/tailwind.json"],
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"codeium.enableCodeLens": false
 }
