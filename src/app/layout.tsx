@@ -3,10 +3,10 @@ import '@/styles/globals.css'
 import { type Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import { headers } from 'next/headers'
-
+import { Analytics } from '@vercel/analytics/react'
 import { TRPCReactProvider } from '@/trpc/react'
-import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
+import { cn } from '@/lib/utils'
 
 const fontSans = FontSans({
 	subsets: ['latin'],
@@ -43,6 +43,7 @@ export default function RootLayout({
 						enableSystem
 						disableTransitionOnChange>
 						{children}
+						<Analytics />
 					</ThemeProvider>
 				</TRPCReactProvider>
 			</body>
