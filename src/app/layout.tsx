@@ -1,17 +1,12 @@
 import '@/styles/globals.css'
 
 import { type Metadata } from 'next'
-import { Inter as FontSans } from 'next/font/google'
 import { headers } from 'next/headers'
 import { Analytics } from '@vercel/analytics/react'
 import { TRPCReactProvider } from '@/trpc/react'
 import { ThemeProvider } from '@/components/theme-provider'
 import { cn } from '@/lib/utils'
-
-const fontSans = FontSans({
-	subsets: ['latin'],
-	variable: '--font-sans'
-})
+import { fontSans } from '@/lib/fonts'
 
 export const metadata: Metadata = {
 	title: 'Michaell Alavedra',
