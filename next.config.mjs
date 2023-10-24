@@ -5,6 +5,11 @@
 await import('./src/env.mjs')
 
 /** @type {import("next").NextConfig} */
-const config = {}
+const config = {
+	i18n: {
+		locales: ['en-US'],
+		defaultLocale: 'en-US'
+	}
+}
 
 export default config

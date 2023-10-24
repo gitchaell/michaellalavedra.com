@@ -1,11 +1,14 @@
 {
 	"recommendations": [
 		"bradlc.vscode-tailwindcss",
-		"usernamehw.errorlens",
+		"codeium.codeium",
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
-		"yoavbls.pretty-ts-errors",
+		"jock.svg",
+		"naumovs.color-highlight",
 		"prisma.prisma",
-		"jock.svg"
+		"usernamehw.errorlens",
+		"yoavbls.pretty-ts-errors",
+		"zixuanchen.vitest-explorer",
 	]
 }
