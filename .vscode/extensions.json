@@ -10,5 +10,7 @@
 		"usernamehw.errorlens",
 		"yoavbls.pretty-ts-errors",
 		"zixuanchen.vitest-explorer",
+		"vivaxy.vscode-conventional-commits",
+		"mhutchie.git-graph"
 	]
 }

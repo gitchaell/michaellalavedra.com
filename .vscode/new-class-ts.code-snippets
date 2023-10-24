@@ -1,0 +1,15 @@
+{
+	"New Typescript Class": {
+		"scope": "typescript",
+		"prefix": "_class",
+		"body": [
+			"export class $TM_FILENAME_BASE {",
+			"\tconstructor() {",
+			"\t\t$0",
+			"\t}",
+			"}"
+		],
+		"isFileTemplate": true,
+		"description": "Typescript class template",
+	}
+}
