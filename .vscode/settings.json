@@ -73,6 +73,6 @@
 	"workbench.list.smoothScrolling": true,
 	"workbench.sideBar.location": "left",
 	"workbench.startupEditor": "none",
-	"workbench.statusBar.visible": false,
+	"workbench.statusBar.visible": true,
 	"workbench.tree.indent": 12
 }
