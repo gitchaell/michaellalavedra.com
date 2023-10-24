@@ -1,0 +1,17 @@
+{
+	"ci": {
+		"collect": {
+			"startServerCommand": "pnpm start",
+			"startServerReadyPattern": "ready",
+			"url": ["http://localhost:3000"],
+			"numberOfRuns": 3
+		},
+		"assert": {
+			"preset": "lighthouse:all"
+		},
+		"upload": {
+			"target": "temporary-public-storage"
+		},
+		"server": {}
+	}
+}

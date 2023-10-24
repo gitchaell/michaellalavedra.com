@@ -11,7 +11,7 @@
 	},
 	"breadcrumbs.symbolPath": "off",
 	"codeium.enableCodeLens": false,
-	"conventionalCommits.scopes": ["vscode", "fonts"],
+	"conventionalCommits.scopes": ["vscode", "fonts", "lighthouse"],
 	"conventionalCommits.showNewVersionNotes": false,
 	"css.customData": [".vscode/tailwind.json"],
 	"debug.toolBarLocation": "docked",
@@ -24,11 +24,11 @@
 	"editor.formatOnPaste": false,
 	"editor.formatOnSave": true,
 	"editor.lightbulb.enabled": false,
-	"editor.lineHeight": 2,
+	"editor.lineHeight": 1.8,
 	"editor.linkedEditing": true,
 	"editor.minimap.enabled": false,
 	"editor.renderWhitespace": "all",
-	"editor.rulers": [100],
+	"editor.rulers": [80],
 	"editor.smoothScrolling": true,
 	"editor.suggestSelection": "first",
 	"editor.tabCompletion": "on",
@@ -68,5 +68,5 @@
 	"workbench.sideBar.location": "left",
 	"workbench.startupEditor": "none",
 	"workbench.statusBar.visible": false,
-	"workbench.tree.indent": 20
+	"workbench.tree.indent": 12
 }
