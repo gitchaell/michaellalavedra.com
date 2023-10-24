@@ -21,8 +21,15 @@
 	"lang": "en",
 	"name": "Michaell Alavedra",
 	"short_name": "Michaell",
-	"scope": "https://michaellalavedra.com",
-	"start_url": "https://michaellalavedra.com",
 	"description": "Personal website of Michaell Alavedra",
-	"id": "https://michaellalavedra.com"
+	"id": "https://michaellalavedra.com",
+	"categories": ["portfolio", "personal website", "blog"],
+	"screenshots": [
+		{
+			"src": "icon512_rounded.png",
+			"type": "image/png",
+			"sizes": "1024x593",
+			"form_factor": "wide"
+		}
+	]
 }
