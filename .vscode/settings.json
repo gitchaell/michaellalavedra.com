@@ -1,5 +1,18 @@
 {
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+	"[typescript]": {
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": [
+			"source.addMissingImports",
+			"source.fixAll.eslint"
+		]
+	},
+	"breadcrumbs.symbolPath": "off",
 	"codeium.enableCodeLens": false,
+	"conventionalCommits.scopes": ["vscode", "fonts"],
+	"conventionalCommits.showNewVersionNotes": false,
 	"css.customData": [".vscode/tailwind.json"],
 	"debug.toolBarLocation": "docked",
 	"editor.autoClosingDelete": "auto",
@@ -8,6 +21,8 @@
 	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.dragAndDrop": false,
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": true,
 	"editor.lightbulb.enabled": false,
 	"editor.lineHeight": 2,
 	"editor.linkedEditing": true,
@@ -25,36 +40,33 @@
 	"explorer.excludeGitIgnore": false,
 	"explorer.openEditors.visible": 0,
 	"files.autoSave": "onFocusChange",
-	"editor.formatOnPaste": false,
-	"editor.formatOnSave": true,
 	"files.eol": "\n",
 	"html.autoClosingTags": true,
 	"javascript.autoClosingTags": true,
+	"prettier.arrowParens": "avoid",
+	"prettier.bracketSameLine": true,
+	"prettier.bracketSpacing": true,
+	"prettier.htmlWhitespaceSensitivity": "css",
+	"prettier.jsxSingleQuote": true,
+	"prettier.printWidth": 80,
+	"prettier.proseWrap": "preserve",
+	"prettier.quoteProps": "as-needed",
+	"prettier.semi": false,
+	"prettier.singleAttributePerLine": false,
 	"prettier.singleQuote": true,
+	"prettier.tabWidth": 2,
+	"prettier.trailingComma": "none",
 	"prettier.useTabs": true,
 	"search.useGlobalIgnoreFiles": true,
 	"search.useIgnoreFiles": true,
 	"typescript.autoClosingTags": true,
-	"workbench.editor.showTabs": false,
-	"workbench.list.horizontalScrolling": true,
-	"workbench.sideBar.location": "left",
-	"workbench.tree.indent": 20,
-	"workbench.list.smoothScrolling": true,
-	"workbench.iconTheme": "monospace",
-	"breadcrumbs.symbolPath": "off",
-	"workbench.startupEditor": "none",
 	"typescript.updateImportsOnFileMove.enabled": "always",
-	"conventionalCommits.showNewVersionNotes": false,
+	"workbench.editor.showTabs": false,
+	"workbench.iconTheme": "monospace",
+	"workbench.list.horizontalScrolling": true,
+	"workbench.list.smoothScrolling": true,
+	"workbench.sideBar.location": "left",
+	"workbench.startupEditor": "none",
 	"workbench.statusBar.visible": false,
-	"[typescript]": {
-		"editor.formatOnSave": false,
-		"editor.codeActionsOnSave": [
-			"source.addMissingImports",
-			"source.fixAll.eslint"
-		]
-	},
-	"[prisma]": {
-		"editor.defaultFormatter": "Prisma.prisma"
-	},
-	"conventionalCommits.scopes": ["vscode"]
+	"workbench.tree.indent": 20
 }

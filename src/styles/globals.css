@@ -73,4 +73,20 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+
+	.title {
+		--var-weight: 900;
+		--var-slant: 0;
+		--var-size: 96px;
+		--var-letterSpacing: -0.01em;
+		--var-lineHeight: 0.96;
+		font-weight: unset;
+		text-align: center;
+		font-size: var(--var-size);
+		letter-spacing: var(--var-letterSpacing);
+		line-height: var(--var-lineHeight);
+		font-variation-settings:
+			'wght' var(--var-weight),
+			'slnt' var(--var-slant);
+	}
 }
