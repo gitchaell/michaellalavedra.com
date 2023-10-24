@@ -30,7 +30,8 @@ const config = {
 			{
 				checksVoidReturn: { attributes: false }
 			}
-		]
+		],
+		'@next/next/no-document-import-in-page': 'off'
 	}
 }
 

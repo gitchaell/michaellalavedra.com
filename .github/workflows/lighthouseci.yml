@@ -19,11 +19,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - name: install and build
+      - name: Netxt install, build
         run: |
           pnpm install
           pnpm build
-      - name: run Lighthouse CI
+      - name: Run Lighthouse CI
         run: |
           pnpm add -g @lhci/cli
           lhci autorun
