@@ -26,6 +26,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en' suppressHydrationWarning>
+			<head>
+				<link rel='manifest' href='/manifest.json' />
+				<link rel='apple-touch-icon' href='/icon512_rounded.png'></link>
+				<meta name='theme-color' content='#fff' />
+			</head>
 			<body
 				className={cn(
 					'min-h-screen bg-background font-sans antialiased',
