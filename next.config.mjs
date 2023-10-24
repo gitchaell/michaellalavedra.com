@@ -3,7 +3,7 @@
  * for Docker builds.
  */
 await import('./src/env.mjs')
-import withPWA from 'next-pwa/'
+import withPWA from 'next-pwa'
 
 /** @type {import("next").NextConfig} */
 const config = {
