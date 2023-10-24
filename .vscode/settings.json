@@ -11,7 +11,13 @@
 	},
 	"breadcrumbs.symbolPath": "off",
 	"codeium.enableCodeLens": false,
-	"conventionalCommits.scopes": ["vscode", "fonts", "lighthouse", "pwa"],
+	"conventionalCommits.scopes": [
+		"vscode",
+		"fonts",
+		"lighthouse",
+		"pwa",
+		"open-graph"
+	],
 	"conventionalCommits.showNewVersionNotes": false,
 	"css.customData": [".vscode/tailwind.json"],
 	"debug.toolBarLocation": "docked",
