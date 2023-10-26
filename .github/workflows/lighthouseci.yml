@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - name: Netxt install, build
+      - name: Next.js install, build
         run: |
           pnpm install
           pnpm build
