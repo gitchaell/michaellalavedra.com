@@ -11,11 +11,15 @@ import { fontSans } from '@/lib/fonts'
 export const metadata: Metadata = {
 	title: 'Michaell Alavedra',
 	description: 'Software Development Engineer based in Santa Cruz Bolivia',
-	icons: [{ rel: 'icon', url: '/favicon.ico' }],
+	icons: {
+		icon: '/favicon.ico',
+		apple: '/icon512_rounded.png'
+	},
 	authors: {
 		name: '@gitchaell',
 		url: 'https://github.com/gitchaell'
 	},
+	manifest: './manifest.json',
 	themeColor: '#000000',
 	openGraph: {
 		title: 'Michaell Alavedra',
@@ -48,11 +52,6 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-			<head>
-				<link rel='manifest' href='/manifest.json' />
-				<link rel='apple-touch-icon' href='/icon512_rounded.png'></link>
-				<meta name='theme-color' content='#fff' />
-			</head>
 			<body
 				className={cn(
 					'min-h-screen bg-background font-sans antialiased',

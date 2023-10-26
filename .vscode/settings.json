@@ -16,7 +16,8 @@
 		"fonts",
 		"lighthouse",
 		"pwa",
-		"open-graph"
+		"open-graph",
+		"playwright"
 	],
 	"conventionalCommits.showNewVersionNotes": false,
 	"css.customData": [".vscode/tailwind.json"],
